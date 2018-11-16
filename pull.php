@@ -51,14 +51,14 @@ if(isset($_SERVER['PHP_AUTH_USER']) && $_SERVER['PHP_AUTH_USER'] == $user && iss
 			$_SESSION['pulledTime'] = time();
 
 
-			echo "<pre>-------------------------<br/>Executing Pull Request...<br/>-------------------------</pre>";
+			echo "<pre>----------------------------<br/>Executing Pull Request...<br/>----------------------------</pre>";
 
 			$output = shell_exec("cd /var/www/html/pbox14/ && git pull 2>&1");
 			echo "<pre>".$output."</pre>";
 
 			sleep(1);
 
-			echo "<pre>-------------------------<br/>Pulling completed...<br/>-------------------------</pre>";
+			echo "<pre>----------------------------<br/>Pull Request completed...<br/>----------------------------</pre>";
 		}else {
 			if ($differenceInSecondsPull > $MAX_PULL_TIMEOUT) {
 				$_SESSION['isPulling'] = 0;
