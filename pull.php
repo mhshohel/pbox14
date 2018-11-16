@@ -78,10 +78,11 @@
 //	echo "<pre>Unauthorized Access.</pre>";
 //}
 //
-//?>
 
 $output = shell_exec("cd /var/www/html/pbox14/ && git pull 2>&1");
 echo "<pre>".$output."</pre>";
+
+?>
 
 
 <style>
