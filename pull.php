@@ -79,7 +79,7 @@
 //}
 //
 
-$output = shell_exec("cd /var/www/html/pbox14/ && git pull 2>&1");
+$output = shell_exec("cd /var/www/html/pbox14/ && sudo git pull 2>&1");
 echo "<pre>".$output."</pre>";
 
 ?>
